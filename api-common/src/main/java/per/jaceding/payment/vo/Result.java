@@ -62,6 +62,16 @@ public class Result {
     }
 
     /**
+     * 封装请求成功DTO
+     *
+     * @param message 返回消息
+     * @param data 返回数据
+     */
+    public static Result success(String message, Object data) {
+        return new Result(200, message, data);
+    }
+
+    /**
      * 封装请求失败DTO
      *
      * @param code    失败码
