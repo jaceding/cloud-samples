@@ -31,6 +31,10 @@ eureka:
     service-url:
 #      defaultZone: http://localhost:7001/eureka
       defaultZone: http://eureka7001:7001/eureka,http://eureka7002:7002/eureka
+  # 修改Eureka中Status服务名
+  instance:
+    instance-id: payment8002
+
 mybatis-plus:
   mapper-locations: classpath*:/mapperxml/**.xml
   type-aliases-package: per.jaceding.payment.entity
