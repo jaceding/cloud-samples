@@ -26,7 +26,7 @@ public class OrderController {
     /**
      * 支付模块地址
      */
-    public static final String PAYMENT_URL = "http://127.0.0.1:8001/payment/";
+    public static final String CREATE_PAYMENT_URL = "http://provider-payment8001/payment/";
 
     @Autowired
     private RestTemplate restTemplate;
@@ -38,7 +38,9 @@ public class OrderController {
             log.info("serial#" + serial);
             Map<String, String> body = new HashMap<>(2, 1f);
             body.put("serial", UUID.randomUUID().toString());
-            Result result = restTemplate.postForObject(PAYMENT_URL, body, Result.class);
+            log.info("CREATE_PAYMENT_URL#" + CREATE_PAYMENT_URL);
+            Result result = restTemplate.postForObject(CREATE_PAYMENT_URL, body, Result.class);
+            log.info("result#" + result.toString());
             if (result != null && result.getCode() == 200) {
                 return Result.success("创建成功", body);
             }
