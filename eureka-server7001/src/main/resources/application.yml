@@ -1,0 +1,19 @@
+server:
+  port: 7001
+logging:
+  config: classpath:log4j2-spring.xml
+spring:
+  application:
+    name: eureka-server7001
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    # 表示不向注册中心注册自己
+    register-with-eureka: false
+    # false表示自己端就是注册中心，我的职责就是维护服务实例，并不需要去检索服务
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
