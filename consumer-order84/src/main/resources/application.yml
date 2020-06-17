@@ -1,0 +1,12 @@
+server:
+  port: 84
+logging:
+  config: classpath:log4j2-spring.xml
+spring:
+  application:
+    name: order-service
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+  cloud:
+    zookeeper:
+      connect-string: 127.0.0.1:2181,127.0.0.1:2182,127.0.0.1:2183
