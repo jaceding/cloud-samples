@@ -45,6 +45,9 @@ hs_err_pid*
 *.iml
 out
 gen
+mvnw
+mvnw.cmd
+*/.mvn/
 
 # rebel
 rebel.xml
