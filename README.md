@@ -17,3 +17,8 @@ Samples for Spring Cloud
 
 1. consumer-order84
 2. provider-payment8004
+
+## consul作为注册中心
+
+1. consumer-order86
+2. provider-payment8006
