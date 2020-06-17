@@ -1,0 +1,15 @@
+server:
+  port: 86
+logging:
+  config: classpath:log4j2-spring.xml
+spring:
+  application:
+    name: order-service
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
