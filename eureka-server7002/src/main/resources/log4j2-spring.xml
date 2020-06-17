@@ -6,7 +6,7 @@
     <Properties>
         <property name="LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss} %-5level [%thread][%file:%line] - %msg%n" />
         <property name="LOG_HOME" value="./logs" />
-        <property name="LOG_NAME" value="eureka7001" />
+        <property name="LOG_NAME" value="eureka7002" />
     </Properties>
 
     <appenders>
