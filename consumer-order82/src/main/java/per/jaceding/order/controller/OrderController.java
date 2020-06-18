@@ -50,4 +50,15 @@ public class OrderController {
         }
         return Result.fail("查询失败");
     }
+
+    @GetMapping("/openFeign")
+    public Result openFeign() {
+        try {
+            return paymentService.openFeign();
+        } catch (Exception e) {
+            e.printStackTrace();
+            log.error("查询失败", e);
+        }
+        return Result.fail("查询失败");
+    }
 }

@@ -23,7 +23,7 @@ Samples for Spring Cloud
 1. consumer-order86
 2. provider-payment8006
 
-## 使用Ribbon+自定义负载均衡策略
+## 整合Ribbon+自定义负载均衡策略
 
 1. consumer-order81
 2. provider-payment8001
@@ -31,5 +31,11 @@ Samples for Spring Cloud
 4. eureka-server7001
 5. eureka-server7002
 
+## 整合OpenFeign实现服务调用（超时控制、日志增加）
 
+1. consumer-order82
+2. provider-payment8001
+3. provider-payment8002
+4. eureka-server7001
+5. eureka-server7002
 

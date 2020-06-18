@@ -13,6 +13,7 @@ import per.jaceding.payment.vo.Result;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 /**
  * 支付 控制层
@@ -82,6 +83,21 @@ public class PaymentController {
             dataMap.put("instances", instances);
             dataMap.put("discoveryClient", discoveryClient);
             return Result.success(dataMap);
+        } catch (Exception e) {
+            log.error("查询失败", e);
+        }
+        return Result.fail("查询失败");
+    }
+
+    /**
+     * 测试OpenFeign超时和日志打印
+     */
+    @GetMapping("/openFeign")
+    public Result openFeign(){
+        try{
+            log.info("sleep 2 s");
+            TimeUnit.SECONDS.sleep(2);
+            return Result.success("openFeign");
         } catch (Exception e) {
             log.error("查询失败", e);
         }

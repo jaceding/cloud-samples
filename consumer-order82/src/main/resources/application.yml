@@ -2,6 +2,8 @@ server:
   port: 82
 logging:
   config: classpath:log4j2-spring.xml
+  level:
+    per.jaceding.order.service.PaymentService: debug
 spring:
   application:
     name: consumer-order82
@@ -22,3 +24,10 @@ eureka:
     instance-id: order81
     # 访问路径可以显示ip地址
     prefer-ip-address: true
+ribbon:
+  eureka:
+    enabled: true
+  # ribbon链接超时时长
+  ConnectTimeout: 5000
+  # ribbon读取超时时间长
+  ReadTimeout: 2500
