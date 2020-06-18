@@ -19,7 +19,6 @@
         <module>provider-payment8006</module>
         <module>consumer-order86</module>
         <module>consumer-order81</module>
-        <module>consumer-order82</module>
     </modules>
     <packaging>pom</packaging>
 
