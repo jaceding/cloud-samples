@@ -22,3 +22,14 @@ Samples for Spring Cloud
 
 1. consumer-order86
 2. provider-payment8006
+
+## 使用Ribbon+自定义负载均衡策略
+
+1. consumer-order81
+2. provider-payment8001
+3. provider-payment8002
+4. eureka-server7001
+5. eureka-server7002
+
+
+
