@@ -48,6 +48,7 @@ gen
 mvnw
 mvnw.cmd
 */.mvn/
+/logs
 
 # rebel
 rebel.xml
