@@ -11,7 +11,7 @@ import per.jaceding.payment.vo.Result;
 
 /**
  * 订单 控制层
- * DefaultProperties 全局配置
+ * DefaultProperties 全局配置（但需要配置HystrixCommand注解）
  *
  * @author jaceding
  * @date 2020/6/17
