@@ -22,6 +22,7 @@
         <module>consumer-order82</module>
         <module>provider-payment8008</module>
         <module>consumer-order88</module>
+        <module>hystrix-dashboard9001</module>
     </modules>
     <packaging>pom</packaging>
 
