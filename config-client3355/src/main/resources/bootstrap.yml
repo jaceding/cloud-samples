@@ -4,7 +4,7 @@ logging:
   config: classpath:log4j2-spring.xml
 spring:
   application:
-    name: config-client
+    name: config-client3355
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
   cloud:
@@ -13,6 +13,12 @@ spring:
       name: config # 文件名称
       profile: dev # 后缀名称 最终，master分支上config-dev.yml的配置文件被读取（http://config-center/master/config-dev.yml）
       uri: http://config3344:3344 # 配置中心地址 此时不能使用配置中心的服务名称
+  # rabbitmq相关配置
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: user
+    password: dy@2020
 
 eureka:
   client:
@@ -25,7 +31,7 @@ eureka:
       defaultZone: http://eureka7001:7001/eureka,http://eureka7002:7002/eureka
   instance:
     # 修改Eureka中Status服务名
-    instance-id: config-client
+    instance-id: config-client3355
     # 访问路径可以显示ip地址
     prefer-ip-address: true
 

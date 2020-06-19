@@ -9,11 +9,16 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>config-center3344</artifactId>
-    <name>config-center3344</name>
-    <description>config-center3344</description>
+    <artifactId>config-client3356</artifactId>
+    <name>config-center3356</name>
+    <description>config-center3356</description>
 
     <dependencies>
+        <dependency>
+            <groupId>per.jaceding</groupId>
+            <artifactId>api-common</artifactId>
+            <version>1.0</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -46,7 +51,7 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-config-server</artifactId>
+            <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
