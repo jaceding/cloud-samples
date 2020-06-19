@@ -3,17 +3,17 @@ Samples for Spring Cloud
 
 ## 目录
 
-* * * [cloud\-samples](#cloud-samples)
-      * [目录](#%E7%9B%AE%E5%BD%95)
-      * [公共模块](#%E5%85%AC%E5%85%B1%E6%A8%A1%E5%9D%97)
-      * [eureka集群作为注册中心](#eureka%E9%9B%86%E7%BE%A4%E4%BD%9C%E4%B8%BA%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83)
-      * [zookeeper集群作为注册中心](#zookeeper%E9%9B%86%E7%BE%A4%E4%BD%9C%E4%B8%BA%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83)
-      * [consul作为注册中心](#consul%E4%BD%9C%E4%B8%BA%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83)
-      * [整合Ribbon](#%E6%95%B4%E5%90%88ribbon)
-      * [整合OpenFeign](#%E6%95%B4%E5%90%88openfeign)
-      * [整合Hystrix](#%E6%95%B4%E5%90%88hystrix)
-      * [整合Gateway](#%E6%95%B4%E5%90%88gateway)
-      * [整合Config](#%E6%95%B4%E5%90%88config)
+* [cloud\-samples](#cloud-samples)
+  * [目录](#%E7%9B%AE%E5%BD%95)
+  * [公共模块](#%E5%85%AC%E5%85%B1%E6%A8%A1%E5%9D%97)
+  * [eureka集群作为注册中心](#eureka%E9%9B%86%E7%BE%A4%E4%BD%9C%E4%B8%BA%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83)
+  * [zookeeper集群作为注册中心](#zookeeper%E9%9B%86%E7%BE%A4%E4%BD%9C%E4%B8%BA%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83)
+  * [consul作为注册中心](#consul%E4%BD%9C%E4%B8%BA%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83)
+  * [整合Ribbon](#%E6%95%B4%E5%90%88ribbon)
+  * [整合OpenFeign](#%E6%95%B4%E5%90%88openfeign)
+  * [整合Hystrix](#%E6%95%B4%E5%90%88hystrix)
+  * [整合Gateway](#%E6%95%B4%E5%90%88gateway)
+  * [整合Config、Bus](#%E6%95%B4%E5%90%88configbus)
 
 ## 公共模块
 
@@ -77,9 +77,14 @@ Samples for Spring Cloud
 4. eureka-server7001
 5. eureka-server7002
 
-## 整合Config
+## 整合Config、Bus
 
-**实现配置中心、配置动态刷新**
+**实现配置中心、配置动态刷新(需要手动发送POST请求给客户端)**
+
+**集成Bus后，动态刷新配置（只需要手动发送POST请求给配置中心）、刷新指定客户端的配置**
+
+注意：上述中的客户端是相对配置中心来说的，集成Bus后可以通过GitHub或者GitLab的webhook功能自动发送POST请求。
 
 1. config-center3344
 2. config-client3355
+3. config-client3356
