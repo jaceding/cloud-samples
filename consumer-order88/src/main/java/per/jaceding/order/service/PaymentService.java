@@ -6,6 +6,8 @@ import per.jaceding.payment.vo.Result;
 
 /**
  * 支付业务层接口
+ * Feign也支持fallback 需要另写一个类实现该接口，然后进行相应的业务处理，配置如下
+ * @FeignClient(value = "payment-service", fallback = PaymentServiceHandler.class)
  *
  * @author jaceding
  * @date 2020/6/18
