@@ -3,16 +3,17 @@ Samples for Spring Cloud
 
 ## 目录
 
-* * [cloud\-samples](#cloud-samples)
-    * [目录](#%E7%9B%AE%E5%BD%95)
-    * [公共模块](#%E5%85%AC%E5%85%B1%E6%A8%A1%E5%9D%97)
-    * [eureka集群作为注册中心](#eureka%E9%9B%86%E7%BE%A4%E4%BD%9C%E4%B8%BA%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83)
-    * [zookeeper集群作为注册中心](#zookeeper%E9%9B%86%E7%BE%A4%E4%BD%9C%E4%B8%BA%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83)
-    * [consul作为注册中心](#consul%E4%BD%9C%E4%B8%BA%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83)
-    * [整合Ribbon](#%E6%95%B4%E5%90%88ribbon)
-    * [整合OpenFeign](#%E6%95%B4%E5%90%88openfeign)
-    * [整合Hystrix](#%E6%95%B4%E5%90%88hystrix)
-    * [整合Gateway](#%E6%95%B4%E5%90%88gateway)
+* * * [cloud\-samples](#cloud-samples)
+      * [目录](#%E7%9B%AE%E5%BD%95)
+      * [公共模块](#%E5%85%AC%E5%85%B1%E6%A8%A1%E5%9D%97)
+      * [eureka集群作为注册中心](#eureka%E9%9B%86%E7%BE%A4%E4%BD%9C%E4%B8%BA%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83)
+      * [zookeeper集群作为注册中心](#zookeeper%E9%9B%86%E7%BE%A4%E4%BD%9C%E4%B8%BA%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83)
+      * [consul作为注册中心](#consul%E4%BD%9C%E4%B8%BA%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83)
+      * [整合Ribbon](#%E6%95%B4%E5%90%88ribbon)
+      * [整合OpenFeign](#%E6%95%B4%E5%90%88openfeign)
+      * [整合Hystrix](#%E6%95%B4%E5%90%88hystrix)
+      * [整合Gateway](#%E6%95%B4%E5%90%88gateway)
+      * [整合Config](#%E6%95%B4%E5%90%88config)
 
 ## 公共模块
 
@@ -75,3 +76,10 @@ Samples for Spring Cloud
 3. gateway9527
 4. eureka-server7001
 5. eureka-server7002
+
+## 整合Config、GitHub
+
+**实现配置中心、配置动态刷新**
+
+1. config-center3344
+2. config-client3355
