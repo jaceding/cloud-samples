@@ -21,4 +21,11 @@ public interface PaymentService extends IService<Payment> {
      * 测试 Hystrix 异常处理
      */
     String testHystrixError();
+
+    /**
+     * 测试 Hystrix 服务熔断
+     *
+     * @param id 参数
+     */
+    String testHystrixCircuitBreaker(Integer id);
 }

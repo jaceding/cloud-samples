@@ -100,4 +100,9 @@ public class PaymentController {
     public Result testHystrixError(){
         return Result.success(paymentService.testHystrixError());
     }
+
+    @GetMapping("/testBreaker/{id}")
+    public Result testBreaker(@PathVariable("id") Integer id) {
+        return Result.success(paymentService.testHystrixCircuitBreaker(id));
+    }
 }

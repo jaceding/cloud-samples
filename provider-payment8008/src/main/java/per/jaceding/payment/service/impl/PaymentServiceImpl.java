@@ -59,4 +59,34 @@ public class PaymentServiceImpl extends ServiceImpl<PaymentMapper, Payment> impl
         log.info("msg#" + msg);
         return msg;
     }
+
+
+    /**
+     * 测试服务熔断
+     * 配置在 HystrixCommandProperties 这个类中有
+     * 也可以在yml中进行全局配置、指定方法名配置
+     *
+     * @param id 参数
+     */
+    @HystrixCommand(fallbackMethod = "testHystrixCircuitBreakerHandler", commandProperties = {
+            @HystrixProperty(name = "circuitBreaker.enabled", value = "true"),// 设置熔断
+            @HystrixProperty(name = "circuitBreaker.requestVolumeThreshold", value = "10"), // 请求数到10次后才计算
+            @HystrixProperty(name = "circuitBreaker.sleepWindowInMilliseconds", value = "10000"), // 熔断时间
+            @HystrixProperty(name = "circuitBreaker.errorThresholdPercentage", value = "60") // 错误率达60%触发熔断
+    })
+    @Override
+    public String testHystrixCircuitBreaker(Integer id) {
+        if(id < 1){
+            throw new RuntimeException("线程：" + Thread.currentThread().getName() + "非法id");
+        }
+        String msg = "线程：" + Thread.currentThread().getName() + "\t testHystrixCircuitBreaker";
+        log.info("msg#" + msg);
+        return msg;
+    }
+
+    public String testHystrixCircuitBreakerHandler(Integer id){
+        String msg = "线程：" + Thread.currentThread().getName() + "\t testHystrixCircuitBreakerHandler: id不能为负数";
+        log.info("msg#" + msg);
+        return msg;
+    }
 }
