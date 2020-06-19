@@ -7,7 +7,7 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 /**
  * 主类
  *
- * 集成Bus后，不需要对请求所有客户端刷新配置，而是请求注册中心，注册中心会通知客户端刷新
+ * 集成Bus后，不需要对请求所有客户端刷新配置，而是请求配置中心，配置中心会通知客户端刷新
  * 通知所有客户端 POST http://127.0.0.1:3344/actuator/bus-refresh
  * 通知config-client3355 POST http://127.0.0.1:3344/actuator/bus-refresh/config-client3355
  *
