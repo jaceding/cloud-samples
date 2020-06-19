@@ -1,0 +1,32 @@
+server:
+  port: 3344
+logging:
+  config: classpath:log4j2-spring.xml
+spring:
+  application:
+    name: config-center
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/jaceding/cloud-config.git
+          search_paths:
+            - cloud-config
+      label: master
+
+eureka:
+  client:
+    # 表示是否将自己注册进EurekaServer，默认为true
+    register-with-eureka: true
+    # 表示是否从EurekaServer抓取已有的注册信息，默认为true。单节点无所谓，集群必须配置true才能配合Ribbon使用负载均衡
+    fetch-registry: true
+    service-url:
+#      defaultZone: http://localhost:7001/eureka
+      defaultZone: http://eureka7001:7001/eureka,http://eureka7002:7002/eureka
+  instance:
+    # 修改Eureka中Status服务名
+    instance-id: config-center
+    # 访问路径可以显示ip地址
+    prefer-ip-address: true
