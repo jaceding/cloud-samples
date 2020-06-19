@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="per.jaceding.payment.dao.PaymentMapper">
+  <resultMap id="BaseResultMap" type="per.jaceding.payment.entity.Payment">
+    <!--@mbg.generated-->
+    <!--@Table payment-->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="serial" jdbcType="VARCHAR" property="serial" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, serial
+  </sql>
+</mapper>
