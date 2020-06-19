@@ -103,4 +103,18 @@ public class PaymentController {
         }
         return Result.fail("查询失败");
     }
+
+    /**
+     * 查询支付信息(测试网关)
+     *
+     * @param id 主键
+     */
+    @GetMapping("/get/{id}")
+    public Result testGateWay(@PathVariable("id") Long id) {
+        Payment payment = paymentService.getById(id);
+        if (payment == null) {
+            return Result.fail("查询失败，id:" + id);
+        }
+        return Result.success(payment);
+    }
 }
