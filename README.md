@@ -77,7 +77,7 @@ Samples for Spring Cloud
 4. eureka-server7001
 5. eureka-server7002
 
-## 整合Config、GitHub
+## 整合Config
 
 **实现配置中心、配置动态刷新**
 
