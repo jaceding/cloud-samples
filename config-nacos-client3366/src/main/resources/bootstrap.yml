@@ -1,0 +1,29 @@
+server:
+  port: 3366
+logging:
+  config: classpath:log4j2-spring.xml
+spring:
+  application:
+    name: client3366
+  profiles:
+    active: dev
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848 # 指定注册中心
+      config:
+        group: GZ_GROUP
+        server-addr: localhost:8848 # 指定配置中心
+        file-extension: yaml # 指定yaml格式的配置
+
+# ${spring.application.name}-${spring.profile.active}.${spring.cloud.nacos.config.file-extension}
+# config-nacos-client3366-dev.yaml
+
+# 暴露监控端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
