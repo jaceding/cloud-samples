@@ -14,6 +14,7 @@ Samples for Spring Cloud
   * [整合Hystrix](#%E6%95%B4%E5%90%88hystrix)
   * [整合Gateway](#%E6%95%B4%E5%90%88gateway)
   * [整合Config、Bus](#%E6%95%B4%E5%90%88configbus)
+  * [整合Nacos](#%E6%95%B4%E5%90%88nacos)
 
 ## 公共模块
 
@@ -88,3 +89,12 @@ Samples for Spring Cloud
 1. config-center3344
 2. config-client3355
 3. config-client3356
+
+## 整合Nacos
+
+**实现注册中心、配置中心（动态刷新配置）**
+
+1. provider-payment9001
+2. provider-payment9002
+3. consumer-order91
+4. config-nacos-client3366
