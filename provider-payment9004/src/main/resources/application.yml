@@ -1,0 +1,47 @@
+server:
+  port: 9004
+logging:
+  config: classpath:log4j2-spring.xml
+spring:
+  application:
+    name: payment-service9004
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/payment?useUnicode=true&characterEncoding=UTF-8&useSSL=true&serverTimezone=UTC
+    username: root
+    password: 78600649AD8DB724BBDAA5162A74EF84
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    druid:
+      initial-size: 10 #初始化连接池大小
+      min-idle: 1 #最少空闲连接数
+      max-active: 20 #最大连接数
+      max-wait: 60000 #获取连接等待超时的时间
+      time-between-eviction-runs-millis: 60000 #配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+      min-evictable-idle-time-millis: 300000 #配置一个连接在池中最小生存的时间，单位是毫秒
+      validation-query: SELECT 'x' #测试连接
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+    sentinel:
+      transport:
+        dashboard: localhost:8080
+        port: 8719 # 默认8719
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapperxml/**.xml
+  type-aliases-package: per.jaceding.payment.entity
+  configuration:
+    map-underscore-to-camel-case: true #配置mybatis自动将数据库下划线映射成驼峰
+    call-setters-on-nulls: true  #如果查询结果中包含空值的列，则 MyBatis 在映射的时候，不会映射这个字段
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #打印SQL
+    localCacheScope: session
+    cacheEnabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
