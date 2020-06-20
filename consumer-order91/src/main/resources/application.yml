@@ -1,0 +1,16 @@
+server:
+  port: 91
+logging:
+  config: classpath:log4j2-spring.xml
+spring:
+  application:
+    name: consumer-order91
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+
+service-url:
+  payment-service: http://payment-service/payment

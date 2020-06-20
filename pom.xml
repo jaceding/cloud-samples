@@ -27,6 +27,9 @@
         <module>config-center3344</module>
         <module>config-client3355</module>
         <module>config-client3356</module>
+        <module>provider-payment9001</module>
+        <module>provider-payment9002</module>
+        <module>consumer-order91</module>
     </modules>
     <packaging>pom</packaging>
 
