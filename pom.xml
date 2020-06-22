@@ -34,6 +34,9 @@
         <module>provider-payment9004</module>
         <module>consumer-order92</module>
         <module>provider-payment9005</module>
+        <module>seata-order-service2001</module>
+        <module>seata-storage-service2002</module>
+        <module>seata-account-service2003</module>
     </modules>
     <packaging>pom</packaging>
 

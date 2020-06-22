@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="per.jaceding.account.dao.AccountMapper">
+  <resultMap id="BaseResultMap" type="per.jaceding.account.domain.Account">
+    <!--@mbg.generated-->
+    <!--@Table t_account-->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="total" jdbcType="DECIMAL" property="total" />
+    <result column="used" jdbcType="DECIMAL" property="used" />
+    <result column="residue" jdbcType="DECIMAL" property="residue" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, user_id, total, used, residue
+  </sql>
+</mapper>

@@ -16,6 +16,7 @@ Samples for Spring Cloud
   * [整合Config、Bus](#%E6%95%B4%E5%90%88configbus)
   * [整合Nacos](#%E6%95%B4%E5%90%88nacos)
   * [整合Sentinel](#%E6%95%B4%E5%90%88sentinel)
+  * [整合Seata](#%E6%95%B4%E5%90%88seata)
 
 ## 公共模块
 
@@ -107,3 +108,11 @@ Samples for Spring Cloud
 1. provider-payment9004
 2. provider-payment9005
 3. consumer-order92
+
+## 整合Seata
+
+**与mybatis plus整合，实现分布式事务**
+
+1. seata-order-service2001
+2. seata-storage-service2002
+3. seata-account-service2003
