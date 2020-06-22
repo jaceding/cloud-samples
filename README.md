@@ -15,6 +15,7 @@ Samples for Spring Cloud
   * [整合Gateway](#%E6%95%B4%E5%90%88gateway)
   * [整合Config、Bus](#%E6%95%B4%E5%90%88configbus)
   * [整合Nacos](#%E6%95%B4%E5%90%88nacos)
+  * [整合Sentinel](#%E6%95%B4%E5%90%88sentinel)
 
 ## 公共模块
 
@@ -98,3 +99,11 @@ Samples for Spring Cloud
 2. provider-payment9002
 3. consumer-order91
 4. config-nacos-client3366
+
+## 整合Sentinel
+
+**实现流控、服务降级、服务熔断、服务监控、整合openfeign、配置持久化**
+
+1. provider-payment9004
+2. provider-payment9005
+3. consumer-order92
