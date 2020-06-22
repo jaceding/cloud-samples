@@ -32,6 +32,8 @@
         <module>consumer-order91</module>
         <module>config-nacos-client3366</module>
         <module>provider-payment9004</module>
+        <module>consumer-order92</module>
+        <module>provider-payment9005</module>
     </modules>
     <packaging>pom</packaging>
 
